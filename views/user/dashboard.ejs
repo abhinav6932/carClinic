@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title">Welcome, <%= user.fullname %>!</h2>
+                        <p class="text-muted">This is your user dashboard. Use the links below to view your profile or book a service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h4>Profile</h4>
+                        <p class="text-muted">View and manage your account details and service bookings.</p>
+                        <a href="/auth/profile" class="btn btn-primary">Go to Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h4>Book Services</h4>
+                        <p class="text-muted">Browse available services and create a booking.</p>
+                        <a href="/auth/book" class="btn btn-primary">Book a Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5>Your total bookings</h5>
+                        <p class="display-5"><%= bookingCount %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </div>
+
+    <%- include('../partials/footer') %>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

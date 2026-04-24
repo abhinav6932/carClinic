@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    <%- include('partials/header') %>
+
+    <section class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h2>About Our Garage</h2>
+                <p class="lead">We are dedicated to delivering honest, high-quality auto service with a friendly experience.</p>
+                <p>With years of experience, our mechanics use the latest tools and parts to keep your vehicle in top condition.</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><strong>Expert technicians</strong> with certified training.</li>
+                    <li class="mb-2"><strong>Transparent pricing</strong> and no hidden fees.</li>
+                    <li class="mb-2"><strong>Fast service</strong> without sacrificing quality.</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="card shadow-sm border-0">
+                    <img src="images/carService.jpg" class="card-img-top" alt="About our service center">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('partials/footer') %>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

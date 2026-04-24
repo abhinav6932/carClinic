@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h2>Admin Dashboard</h2>
+                <p class="text-muted">Welcome back, <strong><%= req.session.adminName %></strong>.</p>
+            </div>
+            <a class="btn btn-secondary" href="/admin/logout">Logout</a>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Add Service</h5>
+                        <p class="card-text">Create new service offerings that will be visible to customers.</p>
+                        <a class="btn btn-primary" href="/admin/services/add">Add Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">View Services</h5>
+                        <p class="card-text">Browse and manage all services currently listed in the system.</p>
+                        <a class="btn btn-primary" href="/admin/services">View Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
